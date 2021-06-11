@@ -1,0 +1,94 @@
+Background: any
+
+verbatim
+let g:fzf_colors = { "fg": ["fg", "Normal"], "bg": ["bg", "Normal"], "hl": ["fg", "Conditional"], "fg+": ["fg", "CursorLine", "CursorColumn", "Normal"], "bg+": ["bg", "CursorLine", "CursorColumn"], "hl+": ["fg", "Conditional"], "info": ["fg", "Conditional"], "border": ["fg", "Ignore"], "prompt": ["fg", "Comment"], "pointer": ["fg", "Conditional"], "marker": ["fg", "Conditional"], "spinner": ["fg", "Conditional"], "header": ["fg", "Conditional"] }
+
+if exists('g:loaded_visual_multi')
+	let g:VM_theme_set_by_colorscheme = 1
+	if &background == 'light'
+		hi VM_extend ctermbg=158    ctermfg=237    guibg=#AAF0D6    guifg=NONE
+		hi VM_cursor ctermbg=80     ctermfg=235    guibg=#78dede    guifg=#262626
+		hi VM_insert ctermbg=229    ctermfg=235    guibg=#ffffaf    guifg=#262626
+		hi VM_mono   ctermbg=124    ctermfg=231    guibg=#B23A2D    guifg=#ffffff
+	else
+		hi VM_extend ctermbg=66     ctermfg=231    guibg=#5f8787    guifg=#ffffff
+		hi VM_cursor ctermbg=36     ctermfg=231    guibg=#00af87    guifg=#ffffff
+		hi VM_insert ctermbg=54     ctermfg=231    guibg=#5f0087    guifg=#ffffff
+		hi VM_mono   ctermbg=167    ctermfg=231    guibg=#e05f51    guifg=#ffffff
+	endif
+endif
+endverbatim
+
+;------------------------------------------------------------------------------
+; Links
+;------------------------------------------------------------------------------
+
+Character      		->	Constant
+Number         		->	Constant
+Boolean        		->	Constant
+Float          		->	Constant
+
+Operator       		->	Identifier
+
+Conditional    		->	Statement
+Repeat         		->	Statement
+Label          		->	Statement
+Keyword        		->	Statement
+Exception      		->	Statement
+
+Include        		->	PreProc
+Define         		->	PreProc
+Macro          		->	PreProc
+PreCondit      		->	PreProc
+
+StorageClass   		->	Type
+Structure      		->	Type
+Typedef        		->	Type
+
+SpecialChar    		->	Special
+SpecialKey     		->	Special
+Tag            		->	Special
+Delimiter      		->	Special
+SpecialComment 		->	Special
+Debug          		->	Special
+Ignore         		->	Special
+
+WarningMsg		->	Error
+Directory		->	Constant
+
+Todo			->	Visual
+
+Search			->	PmenuSel
+IncSearch		->	StatusLine
+
+StatusLineTerm		->	StatusLine
+StatusLineTermN 	->	StatusLineNC
+
+TabLineSel		->	StatusLine
+TabLine			->	StatusLineNC
+
+CursorColumn		->	CursorLine
+
+LineNr			->	NonText
+
+FoldColumn		->	SignColumn
+MatchParen		->	Error
+VertSplit		->	TabLineFill
+WildMenu		->	Visual
+
+diffAdded		->	Statement
+diffRemoved		->	WarningMsg
+DiffLine		->	StatusLineNC
+
+cSpecial		->	Type
+cBraces			->	Delimiter
+csBraces		->	Delimiter
+
+helpHyperTextEntry 	->	Type
+helpHyperTextJump  	->	Constant
+helpOption         	->	Constant
+helpCommand        	->	Statement
+helpExample        	->	Statement
+helpSectionDelim	->	Constant
+
+; vim: ft=colortemplate

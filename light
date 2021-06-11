@@ -1,0 +1,131 @@
+Background: light
+
+;------------------------------------------------------------------------------
+; Basic 16 Colors {{{1
+;------------------------------------------------------------------------------
+
+Color:	ml_black	#000000	~
+Color:	ml_darkred	#B23A2D ~
+Color:	ml_darkgreen	#338768	~
+Color:	ml_darkyellow	#ff8700	~
+Color:	ml_darkblue	#073655	~
+Color:	ml_darkmagenta	#5f0087	~
+Color:	ml_darkcyan	#00afdf ~
+Color:	ml_lightgrey	#c9c9c9	~
+Color:	ml_darkgrey	#a9a9a9	~
+Color:	ml_red		#ff0000	~
+Color:	ml_green	#00af87	~
+Color:	ml_yellow	#ffffaf	~
+Color:	ml_blue		#4a679a	~
+Color:	ml_magenta	#ff87ff	~
+Color:	ml_cyan		#78dede	~
+Color:	ml_white	#f5f5f5	~
+
+;------------------------------------------------------------------------------
+; More Colors {{{1
+;------------------------------------------------------------------------------
+
+Color:	ml_dark		#262626 ~
+Color:	ml_grey		#6c6c6c	~
+Color:	ml_visual	#e2e9f1 ~
+Color:	ml_signcol	#eaeaea 254 White
+Color:	ml_add		#AAF0D6 ~
+Color:	ml_delete	#730b00 ~
+
+;------------------------------------------------------------------------------
+; Terminal Colors
+;------------------------------------------------------------------------------
+
+Term Colors: ml_black		ml_darkred	ml_darkgreen	ml_darkyellow
+Term Colors: ml_darkblue	ml_darkmagenta	ml_darkcyan	ml_lightgrey
+Term Colors: ml_lightgrey	ml_red		ml_green	ml_yellow
+Term Colors: ml_blue		ml_magenta	ml_cyan		ml_white
+
+;------------------------------------------------------------------------------
+; Highlight Groups
+;------------------------------------------------------------------------------
+
+Normal			ml_black	ml_white
+
+Comment			ml_darkgrey	none
+String			ml_darkred	none
+Constant		ml_darkgreen	none
+Function		ml_dark		none
+Identifier		fg		none
+Statement		ml_blue		none
+PreProc 		ml_blue		none	bold
+Type			ml_blue		none	bold
+Title			fg		none	bold
+Special 		ml_grey		none
+NonText 		ml_darkgrey	none
+Underlined 		fg		none	underline
+Error			ml_red		none
+ErrorMsg 		ml_white	ml_red
+Visual			none		ml_visual
+
+;------------------------------------------------------------------------------
+; UI elements
+;------------------------------------------------------------------------------
+
+StatusLine		ml_white	ml_blue
+StatusLineNC		ml_grey		ml_lightgrey
+Pmenu			ml_dark		ml_visual
+PmenuSbar		none		ml_darkgrey
+PmenuSel		ml_white	ml_blue
+PmenuThumb		ml_darkblue	ml_darkblue
+TabLineFill		ml_visual	ml_visual
+ToolbarLine		none		ml_visual
+ToolbarButton		ml_lightgrey	ml_blue
+Cursor			ml_white	ml_darkblue
+CursorLine		none		ml_visual
+CursorLineNr		ml_white	ml_darkgrey
+Folded			ml_grey		ml_signcol	italic
+SignColumn		ml_grey		ml_signcol
+QuickFixLine		fg		ml_signcol
+
+;------------------------------------------------------------------------------
+; Diffs
+;------------------------------------------------------------------------------
+
+DiffAdd			none		ml_add
+DiffChange		none		ml_visual
+DiffDelete		ml_red		none		bold
+DiffText		none		ml_yellow	bold
+
+diffAdded		ml_darkgreen	none
+diffChanged		ml_darkyellow	none
+diffRemoved		ml_delete	none
+
+GitGutterAdd		ml_green	ml_signcol
+GitGutterChange		ml_darkyellow	ml_signcol
+GitGutterDelete		ml_red		ml_signcol
+
+
+;------------------------------------------------------------------------------
+; XTabline theme
+;------------------------------------------------------------------------------
+verbatim
+if exists('g:loaded_xtabline')
+	if !exists('s:theme_light')
+		let s:theme_light = 1
+		call xtabline#hi#generate('minimal_light', {
+			\"XTSelect":      [ 255, 60,  '#f5f5f5',   '#4a679a',   0 ],
+			\"XTSelectMod":   [ 196, 60,  '#ff0000',   '#4a679a',   0 ],
+			\"XTVisible":     [ 240, 255, '#585858',   'bg',        0 ],
+			\"XTVisibleMod":  [ 196, 255, '#ff0000',   'bg',        0 ],
+			\"XTHidden":      [ 60,  255, '#4a679a',   '#eaeaea',   0 ],
+			\"XTHiddenMod":   [ 196, 255, '#ff0000',   '#eaeaea',   0 ],
+			\"XTExtra":       [ 29,  255, '#338768',   '#eaeaea',   0 ],
+			\"XTExtraMod":    [ 196, 255, '#ff0000',   '#eaeaea',   0 ],
+			\"XTSpecial":     [ 255, 54,  'bg',        '#5f0087',   0 ],
+			\"XTNumSel":      [ 124, 251, '#B23A2D',   '#c9c9c9',   1 ],
+			\"XTNum":         [ 60,  251, '#4a679a',   '#c9c9c9',   0 ],
+			\"XTCorner":      [ 229, 60,  '#ffffaf',   '#4a679a',   0 ],
+			\"XTFill":        [ 60,  0,   '#4a679a',   'NONE',      0 ],
+			\})
+	endif
+	XTabTheme minimal_light
+endif
+endverbatim
+
+; vim: ft=colortemplate
