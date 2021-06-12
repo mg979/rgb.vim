@@ -50,7 +50,7 @@ Normal			ml_black	ml_white
 Comment			ml_darkgrey	none
 String			ml_darkred	none
 Constant		ml_darkgreen	none
-Function		ml_dark		none
+Function		ml_dark		none	bold
 Identifier		fg		none
 Statement		ml_blue		none
 PreProc 		ml_blue		none	bold
@@ -105,6 +105,7 @@ GitGutterDelete		ml_red		ml_signcol
 ; XTabline theme
 ;------------------------------------------------------------------------------
 verbatim
+let $BAT_THEME = 'GitHub'
 if exists('g:loaded_xtabline')
 	if !exists('s:theme_light')
 		let s:theme_light = 1

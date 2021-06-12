@@ -106,6 +106,7 @@ GitGutterDelete		md_delete	md_black
 ; XTabline theme
 ;------------------------------------------------------------------------------
 verbatim
+let $BAT_THEME = 'zenburn'
 if exists('g:loaded_xtabline')
 	if !exists('s:xt_dark')
 		let s:xt_dark = 1
