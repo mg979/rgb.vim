@@ -1,8 +1,6 @@
 Background: any
 
 verbatim
-let g:fzf_colors = { "fg": ["fg", "Normal"], "bg": ["bg", "Normal"], "hl": ["fg", "Conditional"], "fg+": ["fg", "CursorLine", "CursorColumn", "Normal"], "bg+": ["bg", "CursorLine", "CursorColumn"], "hl+": ["fg", "Conditional"], "info": ["fg", "Conditional"], "border": ["fg", "Ignore"], "prompt": ["fg", "Comment"], "pointer": ["fg", "Conditional"], "marker": ["fg", "Conditional"], "spinner": ["fg", "Conditional"], "header": ["fg", "Conditional"] }
-
 if exists('g:loaded_visual_multi')
 	let g:VM_theme_set_by_colorscheme = 1
 	if &background == 'light'
@@ -67,7 +65,7 @@ StatusLineTermN 	->	StatusLineNC
 TabLineSel		->	StatusLine
 TabLine			->	StatusLineNC
 
-CursorColumn		->	CursorLine
+; CursorColumn		->	CursorLine
 
 LineNr			->	NonText
 

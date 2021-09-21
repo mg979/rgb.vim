@@ -77,6 +77,7 @@ TabLineFill		ml_visual	ml_visual
 ToolbarLine		none		ml_visual
 ToolbarButton		ml_lightgrey	ml_blue
 Cursor			ml_white	ml_darkblue
+CursorColumn		none		ml_visual
 CursorLine		none		ml_visual
 CursorLineNr		ml_white	ml_darkgrey
 Folded			ml_grey		ml_signcol	italic

@@ -78,6 +78,7 @@ TabLineFill		md_darkgrey	md_darkgrey
 ToolbarLine		none		md_black
 ToolbarButton		md_lightgrey	md_darkgrey
 Cursor			md_white	md_comment
+CursorColumn		none		md_cline
 CursorLine		none		md_cline
 CursorLineNr		md_white	md_cline
 Folded			md_grey		md_black
@@ -88,10 +89,10 @@ QuickFixLine		none		md_black
 ; Diffs
 ;------------------------------------------------------------------------------
 
-DiffAdd			none		md_darkblue
-DiffChange		none		md_cline
+DiffAdd			md_blue		none		reverse
+DiffChange		md_darkgreen	none		reverse
 DiffDelete		md_delete	none		bold
-DiffText		none		md_delete	bold
+DiffText		md_darkred	none		bold,reverse
 
 diffAdded		md_darkgreen	none
 diffChanged		md_darkyellow	none
