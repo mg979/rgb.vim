@@ -6,7 +6,7 @@ Background: dark
 
 Color:	md_dark		#262626	~
 Color:	md_darkred	#e05f51 ~
-Color:	md_darkgreen	#5f8787	~
+Color:	md_darkgreen	#57875f	~
 Color:	md_darkyellow	#ff8700	~
 Color:	md_darkblue	#073655	~
 Color:	md_darkmagenta	#5f0087	~
@@ -38,7 +38,7 @@ Color:	md_add		#102920	~
 ;------------------------------------------------------------------------------
 
 Term Colors: md_dark		md_darkred	md_darkgreen	md_darkyellow
-Term Colors: md_darkblue	md_darkmagenta	md_darkcyan	md_lightgrey
+Term Colors: md_blue		md_magenta	md_darkcyan	md_lightgrey
 Term Colors: md_lightgrey	md_red		md_green	md_yellow
 Term Colors: md_blue		md_magenta	md_cyan		md_white
 

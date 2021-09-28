@@ -40,7 +40,7 @@ Color:	md_delete	#730b00 ~
 ;------------------------------------------------------------------------------
 
 Term Colors: md_dark		md_darkred	md_darkgreen	md_darkyellow
-Term Colors: md_darkblue	md_darkmagenta	md_darkcyan	md_lightgrey
+Term Colors: md_blue		md_magenta	md_darkcyan	md_lightgrey
 Term Colors: md_lightgrey	md_red		md_green	md_yellow
 Term Colors: md_blue		md_magenta	md_cyan		md_white
 
