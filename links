@@ -60,7 +60,7 @@ Search			->	PmenuSel
 IncSearch		->	StatusLine
 
 StatusLineTerm		->	StatusLine
-StatusLineTermN 	->	StatusLineNC
+StatusLineTermNC	->	StatusLineNC
 
 TabLineSel		->	StatusLine
 TabLine			->	StatusLineNC

@@ -6,7 +6,7 @@ Background: light
 
 Color:	ml_black	#000000	~
 Color:	ml_darkred	#B23A2D ~
-Color:	ml_darkgreen	#338768	~
+Color:	ml_darkgreen	#006000	~
 Color:	ml_darkyellow	#ff8700	~
 Color:	ml_darkblue	#073655	~
 Color:	ml_darkmagenta	#5f0087	~
@@ -14,7 +14,7 @@ Color:	ml_darkcyan	#00afdf ~
 Color:	ml_lightgrey	#c9c9c9	~
 Color:	ml_darkgrey	#a9a9a9	~
 Color:	ml_red		#ff0000	~
-Color:	ml_green	#00af87	~
+Color:	ml_green	#57875f	~
 Color:	ml_yellow	#ffffaf	~
 Color:	ml_blue		#4a679a	~
 Color:	ml_magenta	#ff87ff	~
@@ -37,9 +37,9 @@ Color:	ml_delete	#730b00 ~
 ;------------------------------------------------------------------------------
 
 Term Colors: ml_black		ml_darkred	ml_darkgreen	ml_darkyellow
-Term Colors: ml_darkblue	ml_darkmagenta	ml_darkcyan	ml_lightgrey
+Term Colors: ml_darkblue	ml_darkmagenta	ml_blue		ml_lightgrey
 Term Colors: ml_lightgrey	ml_red		ml_green	ml_yellow
-Term Colors: ml_blue		ml_magenta	ml_cyan		ml_white
+Term Colors: ml_blue		ml_magenta	ml_blue		ml_visual
 
 ;------------------------------------------------------------------------------
 ; Highlight Groups
@@ -62,6 +62,7 @@ Underlined 		fg		none	underline
 Error			ml_red		none
 ErrorMsg 		ml_white	ml_red
 Visual			none		ml_visual
+Terminal		none		ml_visual
 
 ;------------------------------------------------------------------------------
 ; UI elements
@@ -97,7 +98,7 @@ diffAdded		ml_darkgreen	none
 diffChanged		ml_darkyellow	none
 diffRemoved		ml_delete	none
 
-GitGutterAdd		ml_green	ml_signcol
+GitGutterAdd		ml_darkgreen	ml_signcol
 GitGutterChange		ml_darkyellow	ml_signcol
 GitGutterDelete		ml_red		ml_signcol
 

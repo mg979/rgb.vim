@@ -1,0 +1,13 @@
+Full name:  BRB
+Short name: brg
+Author:	    Gianmaria Bajo (mg1979@git.gmail.com)
+Neovim:	    yes
+
+; -----------------------------------------------------------------------------
+
+; green dominant in the dark variant, blue dominant in the light variant
+Include: links
+Include: dark2
+Include: light
+
+; vim: ft=colortemplate

@@ -6,19 +6,19 @@ Background: dark
 
 Color:	md_dark		#262626	~
 Color:	md_darkred	#e05f51 ~
-Color:	md_darkgreen	#5f8787	~
-Color:	md_darkyellow	#ff8700	~
+Color:	md_darkgreen	#57875f	~
+Color:	md_darkyellow	#fa9153	~
 Color:	md_darkblue	#073655	~
 Color:	md_darkmagenta	#5f0087	~
-Color:	md_darkcyan	#00afdf ~
+Color:	md_darkcyan	#4f9cfe ~
 Color:	md_lightgrey	#bcbcbc	~
 Color:	md_darkgrey	#585858	~
-Color:	md_red		#ff0000	~
-Color:	md_green	#00af87	~
-Color:	md_yellow	#ffffaf	~
+Color:	md_red		#ff5e56	~
+Color:	md_green	#70B433	~
+Color:	md_yellow	#efc541	~
 Color:	md_blue		#5b7fbd	~
-Color:	md_magenta	#ff87ff	~
-Color:	md_cyan		#78dede	~
+Color:	md_magenta	#ff81ca	~
+Color:	md_cyan		#88a1c1	~
 Color:	md_white	#eeeeee	~
 
 ;------------------------------------------------------------------------------
@@ -26,12 +26,14 @@ Color:	md_white	#eeeeee	~
 ;------------------------------------------------------------------------------
 
 Color:	md_black	#1e1e1e ~
+Color:	md_pmenu	#222222 ~
 Color:	md_grey		#949494 ~
 Color:	md_comment	#666666 ~
+Color:	md_uilight	#777777 ~
+Color:	md_uidark	#3b3b3b ~
 Color:	md_cline	#303030 ~
 Color:	md_visual	#444444 ~
 Color:	md_delete	#730b00 ~
-Color:	md_add		#102920	~
 
 ;------------------------------------------------------------------------------
 ; Terminal Colors
@@ -49,19 +51,21 @@ Term Colors: md_blue		md_magenta	md_cyan		md_white
 Normal			md_lightgrey	md_dark
 
 Comment			md_comment	none
-String			md_darkred	none
-Constant		md_blue		none
+String			md_darkgreen	none
+Constant		md_darkgreen	none
+Number			none		none
+Operator		md_grey		none
 Function		md_white	none
 Identifier		fg		none
-Statement		md_green	none
-PreProc 		md_grey		none	bold
-Type			md_green	none	bold
+Statement		md_cyan		none
+PreProc			md_grey		none	bold
+Type			md_cyan		none
 Title			md_white	none	bold
-Special 		md_grey		none
-NonText 		md_darkgrey	none
-Underlined 		fg		none	underline
+Special			md_grey		none
+NonText			md_darkgrey	none
+Underlined		fg		none	underline
 Error			md_red		none
-ErrorMsg 		md_white	md_red
+ErrorMsg		md_red		none	reverse
 Visual			none		md_visual
 Terminal		none		none
 
@@ -69,22 +73,34 @@ Terminal		none		none
 ; UI elements
 ;------------------------------------------------------------------------------
 
-StatusLine		fg		md_darkmagenta
-StatusLineNC		md_magenta	md_darkgrey
-Pmenu			md_green	md_black
-PmenuSbar		none		md_darkgrey
-PmenuSel		md_dark		md_green
-PmenuThumb		md_darkgreen	md_darkgreen
-TabLineFill		md_darkgrey	md_darkgrey
+StatusLine		md_uidark	md_uilight
+StatusLineNC		md_uilight	md_uidark
+Pmenu			md_uilight	md_pmenu
+PmenuSbar		md_uidark	md_uidark
+PmenuSel		md_white	md_uidark	bold
+PmenuThumb		md_uilight	md_uilight
+TabLineFill		md_uidark	md_uidark
 ToolbarLine		none		md_black
-ToolbarButton		md_lightgrey	md_darkgrey
-Cursor			md_white	md_comment
+ToolbarButton		md_uilight	md_uidark
+Cursor			md_white	md_darkcyan
 CursorColumn		none		md_cline
 CursorLine		none		md_cline
-CursorLineNr		md_white	md_cline
-Folded			md_grey		md_black
-SignColumn		md_grey		md_black
+CursorLineNr		md_uilight	none
+LineNr			md_uidark	none
+Folded			md_comment	md_black
+SignColumn		md_comment	md_black
 QuickFixLine		none		md_black
+ModeMsg			md_white	none
+MoreMsg			md_green	none
+Question		md_yellow	none
+
+Search			md_green	none	bold,reverse
+IncSearch		md_yellow	none	bold,reverse
+
+; SpellBad		none		none		underline guisp=md_red
+; SpellCap		none		none		underline guisp=md_darkyellow
+; SpellLocal		none		none		underline guisp=md_yellow
+; SpellRare		none		none		underline guisp=md_magenta
 
 ;------------------------------------------------------------------------------
 ; Diffs
@@ -100,8 +116,8 @@ diffChanged		md_darkyellow	none
 diffRemoved		md_darkred	none
 
 GitGutterAdd		md_green	md_black
-GitGutterChange		md_magenta	md_black
-GitGutterDelete		md_delete	md_black
+GitGutterChange		md_darkyellow	md_black
+GitGutterDelete		md_red		md_black	bold
 
 
 ;------------------------------------------------------------------------------
@@ -113,18 +129,18 @@ if exists('g:loaded_xtabline')
 	if !exists('s:xt_dark')
 		let s:xt_dark = 1
 		call xtabline#hi#generate('rgb_dark', {
-			\"XTSelect":      [ 235, 36,  '#262626',   '#00af87',   0 ],
-			\"XTSelectMod":   [ 196, 36,  '#ff0000',   '#00af87',   0 ],
+			\"XTSelect":      [ 235, 36,  '#262626',   '#777777',   0 ],
+			\"XTSelectMod":   [ 196, 36,  '#ff5e56',   '#777777',   0 ],
 			\"XTVisible":     [ 240, 235, '#585858',   'bg',        0 ],
-			\"XTVisibleMod":  [ 196, 235, '#ff0000',   'bg',        0 ],
-			\"XTHidden":      [ 36,  237, '#00af87',   '#3a3a3a',   0 ],
-			\"XTHiddenMod":   [ 196, 237, '#ff0000',   '#3a3a3a',   0 ],
+			\"XTVisibleMod":  [ 196, 235, '#ff5e56',   'bg',        0 ],
+			\"XTHidden":      [ 36,  237, '#777777',   '#3a3a3a',   0 ],
+			\"XTHiddenMod":   [ 196, 237, '#ff5e56',   '#3a3a3a',   0 ],
 			\"XTExtra":       [ 250, 237, '#bcbcbc',   '#3a3a3a',   0 ],
-			\"XTExtraMod":    [ 196, 237, '#ff0000',   '#3a3a3a',   0 ],
+			\"XTExtraMod":    [ 196, 237, '#ff5e56',   '#3a3a3a',   0 ],
 			\"XTSpecial":     [ 250, 54,  'fg',        '#5f0087',   0 ],
 			\"XTNumSel":      [ 167, 150, '#e05f51',   'NONE',      1 ],
 			\"XTNum":         [ 68,  233, '#5b7fbd',   'NONE',      0 ],
-			\"XTCorner":      [ 229, 237, '#ffffaf',   '#3a3a3a',   0 ],
+			\"XTCorner":      [ 229, 237, '#efc541',   '#3a3a3a',   0 ],
 			\"XTFill":        [ 68,  0,   '#5b7fbd',   'NONE',      0 ],
 			\})
 	endif
