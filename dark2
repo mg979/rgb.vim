@@ -128,7 +128,7 @@ let $BAT_THEME = 'zenburn'
 if exists('g:loaded_xtabline')
 	if !exists('s:xt_dark')
 		let s:xt_dark = 1
-		call xtabline#hi#generate('rgb_dark', {
+		call xtabline#hi#generate('brg_dark', {
 			\"XTSelect":      [ 235, 36,  '#262626',   '#777777',   0 ],
 			\"XTSelectMod":   [ 196, 36,  '#ff5e56',   '#777777',   0 ],
 			\"XTVisible":     [ 240, 235, '#585858',   'bg',        0 ],
@@ -144,7 +144,7 @@ if exists('g:loaded_xtabline')
 			\"XTFill":        [ 68,  0,   '#5b7fbd',   'NONE',      0 ],
 			\})
 	endif
-	XTabTheme rgb_dark
+	XTabTheme brg_dark
 endif
 endverbatim
 
