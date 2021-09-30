@@ -10,7 +10,7 @@ Color:	md_darkgreen	#57875f	~
 Color:	md_darkyellow	#fa9153	~
 Color:	md_darkblue	#073655	~
 Color:	md_darkmagenta	#5f0087	~
-Color:	md_darkcyan	#4f9cfe ~
+Color:	md_darkcyan	#5787af ~
 Color:	md_lightgrey	#bcbcbc	~
 Color:	md_darkgrey	#585858	~
 Color:	md_red		#ff5e56	~
@@ -58,7 +58,7 @@ Operator		md_grey		none
 Function		md_white	none
 Identifier		fg		none
 Statement		md_cyan		none
-PreProc			md_grey		none	bold
+PreProc			md_darkcyan	none
 Type			md_cyan		none
 Title			md_white	none	bold
 Special			md_grey		none
@@ -108,7 +108,7 @@ IncSearch		md_yellow	none	bold,reverse
 
 DiffAdd			md_blue		none		reverse
 DiffChange		md_darkgreen	none		reverse
-DiffDelete		md_delete	none		bold
+DiffDelete		md_darkred	none		bold
 DiffText		md_darkred	none		bold,reverse
 
 diffAdded		md_darkgreen	none
